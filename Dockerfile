@@ -17,6 +17,7 @@ ENV PATH $PATH:$ANT_HOME/bin
 ENV PATH $PATH:$MAVEN_HOME/bin
 ENV PATH $PATH:$GRADLE_HOME/bin
 
+WORKDIR "/opt"
 
 RUN apt-get update -y
 RUN apt-get install -y curl
@@ -31,8 +32,6 @@ RUN apt-get install -y ant
 
 # install Gradle
 RUN apt-get install -y gradle
-
-RUN cd /opt
 
 # Installs Android SDK
 RUN curl -O ${ANDROID_SDK_URL}
