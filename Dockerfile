@@ -12,7 +12,7 @@ ENV ANT_HOME /usr/share/ant
 ENV MAVEN_HOME /usr/share/maven
 ENV GRADLE_HOME /usr/share/gradle
 ENV ANDROID_HOME /opt/android-sdk-linux
-ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS_VERSION
 ENV PATH $PATH:$ANT_HOME/bin
 ENV PATH $PATH:$MAVEN_HOME/bin
 ENV PATH $PATH:$GRADLE_HOME/bin
@@ -36,7 +36,7 @@ RUN apt-get install -y gradle
 # Installs Android SDK
 RUN curl -O ${ANDROID_SDK_URL}
 RUN tar xf ${ANDROID_SDK_FILENAME}
-RUN echo y | android update sdk --filter ${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION},platform-tools,tools --no-ui -a
+RUN echo y | android update sdk --filter tools,platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} --no-ui -a
 
 # Clean up
 RUN rm ${ANDROID_SDK_FILENAME}
