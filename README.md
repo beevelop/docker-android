@@ -1,4 +1,4 @@
-[![](https://badge.imagelayers.io/beevelop/java:latest.svg)](https://imagelayers.io/?images=beevelop/java:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/beevelop/android:latest.svg)](https://imagelayers.io/?images=beevelop/android:latest 'Get your own badge on imagelayers.io')
 
 # Android based on [beevelop/java](https://github.com/beevelop/docker-java)
 - Ant 1.9.6
