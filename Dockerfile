@@ -7,19 +7,19 @@ ENV ANDROID_SDK_URL https://dl.google.com/android/${ANDROID_SDK_FILENAME}
 ENV ANDROID_BUILD_TOOLS_VERSION 22.0.1
 ENV ANDROID_APIS android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22
 
-RUN apt-get update -yqq
-RUN apt-get install -yqq wget
+RUN apt-get update -y
+RUN apt-get install -y wget
 
 # install 32-bit dependencies require by the android sdk
 RUN dpkg --add-architecture i386
-RUN apt-get update -yqq
-RUN apt-get install -yqq libncurses5:i386 libstdc++6:i386 zlib1g:i386
+RUN apt-get update -y
+RUN apt-get install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386
 
 # install Ant
-RUN apt-get install -yqq ant
+RUN apt-get install -y ant
 
 # install Gradle
-RUN apt-get install -yqq gradle
+RUN apt-get install -y gradle
 
 RUN cd /opt
 
