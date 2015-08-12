@@ -2,8 +2,8 @@ FROM beevelop/java
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 # Build-Variables
-ENV ANDROID_SDK_FILENAME android-sdk_r24.3.3-linux.tgz
-ENV ANDROID_SDK_URL https://dl.google.com/android/${ANDROID_SDK_FILENAME}
+ENV ANDROID_SDK_FILE android-sdk_r24.3.3-linux.tgz
+ENV ANDROID_SDK_URL https://dl.google.com/android/${ANDROID_SDK_FILE}
 ENV ANDROID_BUILD_TOOLS_VERSION 22.0.1
 ENV ANDROID_APIS android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22
 
@@ -35,10 +35,10 @@ RUN apt-get install -y gradle
 
 # Installs Android SDK
 RUN curl -O ${ANDROID_SDK_URL}
-RUN tar xf ${ANDROID_SDK_FILENAME}
-RUN echo y | android update sdk --filter tools,platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} --no-ui -a
+RUN tar xf ${ANDROID_SDK_FILE}
+RUN echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION}
 
 # Clean up
-RUN rm ${ANDROID_SDK_FILENAME}
+RUN rm ${ANDROID_SDK_FILE}
 RUN apt-get autoremove -y
 RUN apt-get clean
