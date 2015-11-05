@@ -28,18 +28,14 @@ RUN apt-get update -y && \
     apt-get update -y && \
     apt-get install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386 && \
 
-    # install Ant
-    apt-get install -y ant && \
-
-    # install Gradle
-    apt-get install -y gradle && \
+    # install Ant and Gradle
+    apt-get install -y ant gradle && \
 
     # Installs Android SDK
-    curl -O ${ANDROID_SDK_URL} && \
-    tar xf ${ANDROID_SDK_FILE} && \
+    curl -sL ${ANDROID_SDK_URL} | tar xz -C . && \
     echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
 
     # Clean up
-    rm ${ANDROID_SDK_FILE} && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     apt-get autoremove -y && \
     apt-get clean
