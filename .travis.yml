@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t beevelop/android .
+  - docker run -d beevelop/android
+  - docker ps -a
+  - docker run beevelop/android /bin/sh -c "android list"
