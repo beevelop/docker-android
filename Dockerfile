@@ -34,6 +34,7 @@ RUN apt-get update -y && \
     # Installs Android SDK
     curl -sL ${ANDROID_SDK_URL} | tar xz -C . && \
     echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
+    chmod a+x -R $ANDROID_HOME && \
 
     # Clean up
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
