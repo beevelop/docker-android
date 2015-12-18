@@ -21,7 +21,7 @@ ENV PATH $PATH:$GRADLE_HOME/bin
 WORKDIR "/opt"
 
 RUN dpkg --add-architecture i386 && \
-    apt-get -qq update & \
+    apt-get -qq update && \
     apt-get -qq install -y curl ant gradle libncurses5:i386 libstdc++6:i386 zlib1g:i386 && \
 
     # Installs Android SDK
