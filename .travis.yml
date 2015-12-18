@@ -4,7 +4,7 @@ services:
   - docker
 
 script:
-  - docker build -t beevelop/android .
-  - docker run -d beevelop/android
+  - docker build -t beendroid .
+  - docker run -d beendroid
   - docker ps -a
-  - docker run beevelop/android /bin/sh -c "android list"
+  - docker run beendroid /bin/sh -c "android list"
