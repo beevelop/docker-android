@@ -3,7 +3,7 @@ FROM beevelop/java
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz" \
-    ANDROID_BUILD_TOOLS_VERSION=23.0.2 \
+    ANDROID_BUILD_TOOLS_VERSION=23.0.3 \
     ANDROID_APIS="android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23" \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
