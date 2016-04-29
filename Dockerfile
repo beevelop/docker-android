@@ -19,7 +19,8 @@ RUN dpkg --add-architecture i386 && \
     # Installs Android SDK
     curl -sL ${ANDROID_SDK_URL} | tar xz -C /opt && \
     echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
-    chmod a+x -R $ANDROID_HOME && \
+    chmod a+x -R $ANDROID_HOME &&
+    chown -R root:root $ANDROID_HOME \
 
     # Clean up
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
