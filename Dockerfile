@@ -4,8 +4,8 @@ MAINTAINER Maik Hummel <m@ikhummel.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz" \
     ANDROID_BUILD_TOOLS_VERSION=23.0.3 \
-    ANDROID_APIS="android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23" \
-    GOOGLE_APIS="addon-google_apis-google-23,addon-google_apis-google-22,addon-google_apis-google-21,addon-google_apis-google-19,addon-google_apis-google-18,addon-google_apis-google-17,addon-google_apis-google-16,addon-google_apis-google-15,addon-google_apis-google-10" \
+    ANDROID_APIS="android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24" \
+    GOOGLE_APIS="addon-google_apis-google-24,addon-google_apis-google-23,addon-google_apis-google-22,addon-google_apis-google-21,addon-google_apis-google-19,addon-google_apis-google-18,addon-google_apis-google-17,addon-google_apis-google-16,addon-google_apis-google-15,addon-google_apis-google-10" \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
     GRADLE_HOME="/usr/share/gradle" \
