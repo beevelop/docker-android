@@ -3,7 +3,7 @@
 [![ImageLayer](https://badge.imagelayers.io/beevelop/android:latest.svg)](https://imagelayers.io/?images=beevelop/android:latest)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-# Android 6
+# Android 6 with Google APIs
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
 - Ant 1.9.6
 - Maven 3.3.3
