@@ -14,7 +14,7 @@ ENV PATH $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/bu
 
 RUN dpkg --add-architecture i386 && \
     apt-get -qq update && \
-    apt-get -qq install -y curl ant gradle libncurses5:i386 libstdc++6:i386 zlib1g:i386 && \
+    apt-get -qq install -y curl maven ant gradle libncurses5:i386 libstdc++6:i386 zlib1g:i386 && \
 
     # Installs Android SDK
     curl -sL ${ANDROID_SDK_URL} | tar xz -C /opt && \
