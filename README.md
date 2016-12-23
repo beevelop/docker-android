@@ -1,6 +1,9 @@
-[![Travis](https://img.shields.io/travis/beevelop/docker-android.svg?style=flat-square)](https://travis-ci.org/beevelop/docker-android)
-[![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/android.svg?style=flat-square)](https://links.beevelop.com/d-android)
-[![ImageLayer](https://badge.imagelayers.io/beevelop/android:latest.svg)](https://imagelayers.io/?images=beevelop/android:latest)
+[![Travis](https://shields.beevelop.com/travis/beevelop/docker-android.svg?style=flat-square)](https://travis-ci.org/beevelop/docker-android)
+[![Pulls](https://shields.beevelop.com/docker/pulls/beevelop/android.svg?style=flat-square)](https://links.beevelop.com/d-android)
+[![Layers](https://shields.beevelop.com/docker/image/layers/beevelop/android/gapis.svg?style=flat-square)](https://links.beevelop.com/d-android)
+[![Size](https://shields.beevelop.com/docker/image/size/beevelop/android/gapis.svg?style=flat-square)](https://links.beevelop.com/d-android)
+[![Release](https://shields.beevelop.com/github/release/beevelop/docker-android.svg?style=flat-square)](https://github.com/beevelop/docker-android/releases)
+![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
 # Android 6 with Google APIs
