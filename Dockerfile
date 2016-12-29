@@ -1,7 +1,7 @@
-FROM beevelop/android
+FROM beevelop/android:gapis
 
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
-ENV GOOGLE_APIS="addon-google_apis-google-25,addon-google_apis-google-24,addon-google_apis-google-23,addon-google_apis-google-22,addon-google_apis-google-21,addon-google_apis-google-19,addon-google_apis-google-18,addon-google_apis-google-17,addon-google_apis-google-16,addon-google_apis-google-15,addon-google_apis-google-10"
+ENV ANDROID_EXTRAS="extra-android-m2repository,extra-google-m2repository,extra-google-play_billing,extra-google-market_licensing,extra-google-market_apk_expansion,extra-google-google_play_services,extra-google-webdriver"
 
-RUN echo y | android update sdk -a -u -t ${GOOGLE_APIS}
+RUN echo y | android update sdk -a -u -t ${ANDROID_EXTRAS}
