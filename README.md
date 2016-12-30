@@ -6,7 +6,7 @@
 ![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-# Android 6 with Google APIs
+# Android 7 with Google APIs
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
 - Ant 1.9.6
 - Maven 3.3.3
