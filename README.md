@@ -6,7 +6,7 @@
 ![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-# Android 6
+# Android 7 (SDK 25.X)
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
 - Ant 1.9.6
 - Maven 3.3.9
@@ -14,7 +14,7 @@
 - Gradle 2.10 (Groovy 2.4.5)
 - Android SDK 24.4.1
     + APIs: android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25
-    + Build-Tools: 25.0.0
+    + Build-Tools: 25.0.2
 
 ----
 ### Pull from Docker Hub
