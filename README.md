@@ -17,6 +17,10 @@
     + Build-Tools: 25.0.2
 
 ----
+## Tagging scheme
+- `v${TOOLS_VERSION}-${BUILD_TOOLS_VERSION}-${HIGHEST_ANDROID_SDK_VERSION}`
+- e.g. `v25.2.5-27.0.0-26`
+----
 ### Pull from Docker Hub
 ```
 docker pull beevelop/android:latest
