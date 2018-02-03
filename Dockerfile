@@ -3,8 +3,8 @@ FROM beevelop/java
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/tools_r25.2.5-linux.zip" \
-    ANDROID_BUILD_TOOLS_VERSION=27.0.0 \
-    ANDROID_APIS="android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25,android-26" \
+    ANDROID_BUILD_TOOLS_VERSION=27.0.3 \
+    ANDROID_APIS="android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25,android-26,android-27" \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
     GRADLE_HOME="/usr/share/gradle" \
