@@ -6,15 +6,15 @@
 ![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-# Android 7 (SDK 25.X)
+# Android 8 (SDK Tools 25.2)
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
 - Ant 1.9.6
 - Maven 3.3.9
 - Java 1.8.0_111
 - Gradle 2.10 (Groovy 2.4.5)
-- Android SDK 24.4.1
-    + APIs: android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25
-    + Build-Tools: 25.0.2
+- Android SDK `25.2.5`
+    + APIs: `android-10, android-15 to android-27`
+    + Build-Tools: `27.0.3`
 
 ----
 ## Tagging scheme
