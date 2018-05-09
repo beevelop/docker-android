@@ -22,7 +22,9 @@ RUN dpkg --add-architecture i386 && \
     mkdir android && cd android && \
     wget -O tools.zip ${ANDROID_SDK_URL} && \
     unzip tools.zip && rm tools.zip && \
-    echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
+    yes | /opt/android/tools/bin/sdkmanager --licenses && \
+    android update sdk --use-sdk-wrapper -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
+    /opt/android/tools/bin/sdkmanager --update && \
     chmod a+x -R $ANDROID_HOME && \
     chown -R root:root $ANDROID_HOME && \
 
