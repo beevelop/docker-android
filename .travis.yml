@@ -4,9 +4,10 @@ services:
   - docker
 
 script:
+  - npm i -g npm
   - npm install dockerlint
-  
-  - docker build -t lovadroid .
-  - docker run -d lovadroid
+  - dockerlint Dockerfile
+  - docker build -t local/android .
+  - docker run -d local/android
   - docker ps -a
-  - docker run lovadroid /bin/sh -c "sdkmanager --list && mvn -v && gradle -v && java -version && ant -version"
+  - docker run local/android /bin/sh -c "sdkmanager --list && mvn -v && gradle -v && java -version && ant -version"
