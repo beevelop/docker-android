@@ -4,8 +4,8 @@ services:
   - docker
 
 script:
-  - npm i -g npm
-  - npm install dockerlint
+  - npm install -g npm
+  - npm install -g dockerlint
   - dockerlint Dockerfile
   - docker build -t local/android .
   - docker run -d local/android
