@@ -1,10 +1,5 @@
-[![Travis](https://shields.lovato.com/travis/lovato/docker-android.svg?style=flat-square)](https://travis-ci.org/lovato/docker-android)
-[![Docker Pulls](https://shields.lovato.com/docker/pulls/lovato/android.svg?style=flat-square)](https://links.lovato.com/d-android)
-[![Layers](https://shields.lovato.com/docker/image/layers/lovato/android/latest.svg?style=flat-square)](https://links.lovato.com/d-android)
-[![Size](https://shields.lovato.com/docker/image/size/lovato/android/latest.svg?style=flat-square)](https://links.lovato.com/d-android)
-[![GitHub release](https://shields.lovato.com/github/release/lovato/docker-android.svg?style=flat-square)](https://github.com/lovato/docker-android/releases)
-![Badges](https://shields.lovato.com/badge/badges-7-brightgreen.svg?style=flat-square)
-[![lovato](https://links.lovato.com/honey-badge)](https://beevelop.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/lovato/docker-android.svg?branch=master)](https://travis-ci.org/lovato/docker-android)
 
 # Android 8
 ### forked from [beevelop/android](https://github.com/beevelop/docker-android)
