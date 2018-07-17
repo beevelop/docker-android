@@ -4,6 +4,8 @@ services:
   - docker
 
 script:
+  - npm install dockerlint
+  
   - docker build -t lovadroid .
   - docker run -d lovadroid
   - docker ps -a
