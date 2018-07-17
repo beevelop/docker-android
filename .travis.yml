@@ -1,39 +1,31 @@
 sudo: required
 language: generic
-
 services:
-  - docker
-
+- docker
 branches:
   except:
   - master
-
 before_install:
-  - sudo apt-get update -qq
-
+- sudo apt-get update -qq
 install:
-  - npm install -g npm
-  - npm install -g dockerlint
-  - npm install -g markdownlint-cli
-  - npm install -g travis-lint
-
+- npm install -g npm
+- npm install -g dockerlint
+- npm install -g markdownlint-cli
+- npm install -g travis-lint
 before_script:
-  - travis-lint .travis.yml
-  - dockerlint Dockerfile
-  - markdownlint README.md
-
+- travis-lint .travis.yml
+- dockerlint Dockerfile
+- markdownlint README.md
 script:
-  - docker build -t local/android .
-
+- docker build -t local/android .
 after_script:
-  - docker run -d local/android
-  - docker ps -a
-  - docker run local/android /bin/sh -c "sdkmanager --list && mvn -v && gradle -v && java -version && ant -version"
-
+- docker run -d local/android
+- docker ps -a
+- docker run local/android /bin/sh -c "sdkmanager --list && mvn -v && gradle -v && java -version && ant -version"
 notifications:
   email: false
   slack:
     on_success: always
     on_failure: always
     rooms:
-      secure: LwmtPkwyfoITVgDsbejKchM2vwsPq70zVYpfyqVbFUCys8qFII16HEmz38PDV8SujggbUsmJd1Oug0vW6K0Ie/VSXrZoDleJBTVxsgACNjiFXYca3ZDxpKw0tkfCF9MMM2Wjns5JfW28sqktHddpsC+VWgEG2Fv169/ouOAxiiCiUiTxM9Pmsg9RT89CaHjlrjlHvKg9OgGai3rEvp5rAyvJNvr4yfMyXBozvamNA8u1i7DniB9Jueq06OdBM6JjhiNC0lLoDHvcuvjhhm5P3eh4lzuUxbktyyujcBb6UGXH0Pd0mnyWRlHILseCL/a26dxNtgE3SNcbZHR/aSNhXu7vlVPx9Tf+s/XpHhWTJeofka/+iAGDXkOwlw+ycmrZZt5gDtq0vYS3f+lYDFcCxst6ToJfB9lXV7hnpg2WDvjo7aHx4dvxI/18CGwfOK4JNQxpJfsAMIGjwPPes4FmewSIsDSBygrn39CAhKryOifdR9bqqihjEFqGfSUe3JjOV95Wb13SwTEO17qoZQSpqjt6VwH7VCeAKaHfcWBDEQzRJxLi/Az25iOxbloJdc0wl22t7o6zMr3EaAGjI8HaE9KTIiBiBwU/4HjxjnuKFSH6c6LdHa5BHtfhgqSpNnXnHmdCschBPD5qEwrjPdQ73g/dkzel1RmNIwwUzCmpksw=
+      secure: JvRNZYqG05vJ1KrBDvdVylFPUuiRh0eB9bry/mBfcw7LT/OgJhdWefE5G3RcayWHv+uvBLCBcONZ3f8kTK8QGjSQrhKsljIt7zU2u7zvuVhBvjWFc9R5jCGEfsMtF48YtrA/ChW1WDq3FAW4HxDE+hNDf69ulilDr9jVCZxCuFWud7dchsZHaMlNqeTnRf/fW63eUrBNvJa63YN3c8PZynnnGEJRKgWRPyV2BGlc+mTBuuGsmLfrliBDZj4H0efoS5bTwMzyL0RdnVlJsfZU6lZcunUe8qIyOyZh4Rta50/t6xoRziZpi+0cNKjQ3Mh23f0OLUTEGJj6+7bGZOGPqOrnlmb/NpUO7yrM8gSQNkeq0gm9aapiH9qYYNtWdIa4YoQ7et7hN07PsRD3RXNMQUfiye802reMGE/bi81NGoceG9Q3i9q/SvKXaF49A4nzup+1l2cwMZu+8pNVX4zGpp3HozVF+e6QKZwUq4iMbL60ayirWE8GZwCoG/SlU8xxUwMJn4dVadEE+Ov6S26ndFMZdYVUnZb8GRxFGOWAaJY6GfiUNbLSVwUPYt6jWpeaFABvkCRryBxEHY/j1Ug0gF1HIiJbl84uMJova1x2ILsy/GTthlwI5tvrychSRGSnFVAB9N7u0Adnhjd1NPGyq8nvxgMU8+HjTZ9MfQHKYmY=
