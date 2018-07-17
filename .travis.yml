@@ -3,11 +3,32 @@ sudo: required
 services:
   - docker
 
-script:
+branches:
+  except:
+  - master
+
+before_install:
+  - apt-get update -qq
+
+install:
   - npm install -g npm
   - npm install -g dockerlint
+
+before_script:
   - dockerlint Dockerfile
+
+script:
   - docker build -t local/android .
+
+after_script:
   - docker run -d local/android
   - docker ps -a
   - docker run local/android /bin/sh -c "sdkmanager --list && mvn -v && gradle -v && java -version && ant -version"
+
+notifications:
+  email: false
+  slack:
+    on_success: always
+    on_failure: always
+    rooms:
+      secure: LwmtPkwyfoITVgDsbejKchM2vwsPq70zVYpfyqVbFUCys8qFII16HEmz38PDV8SujggbUsmJd1Oug0vW6K0Ie/VSXrZoDleJBTVxsgACNjiFXYca3ZDxpKw0tkfCF9MMM2Wjns5JfW28sqktHddpsC+VWgEG2Fv169/ouOAxiiCiUiTxM9Pmsg9RT89CaHjlrjlHvKg9OgGai3rEvp5rAyvJNvr4yfMyXBozvamNA8u1i7DniB9Jueq06OdBM6JjhiNC0lLoDHvcuvjhhm5P3eh4lzuUxbktyyujcBb6UGXH0Pd0mnyWRlHILseCL/a26dxNtgE3SNcbZHR/aSNhXu7vlVPx9Tf+s/XpHhWTJeofka/+iAGDXkOwlw+ycmrZZt5gDtq0vYS3f+lYDFcCxst6ToJfB9lXV7hnpg2WDvjo7aHx4dvxI/18CGwfOK4JNQxpJfsAMIGjwPPes4FmewSIsDSBygrn39CAhKryOifdR9bqqihjEFqGfSUe3JjOV95Wb13SwTEO17qoZQSpqjt6VwH7VCeAKaHfcWBDEQzRJxLi/Az25iOxbloJdc0wl22t7o6zMr3EaAGjI8HaE9KTIiBiBwU/4HjxjnuKFSH6c6LdHa5BHtfhgqSpNnXnHmdCschBPD5qEwrjPdQ73g/dkzel1RmNIwwUzCmpksw=
