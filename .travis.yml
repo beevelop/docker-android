@@ -1,4 +1,5 @@
 sudo: required
+language: generic
 
 services:
   - docker
@@ -13,10 +14,13 @@ before_install:
 install:
   - npm install -g npm
   - npm install -g dockerlint
-  
+  - npm install -g markdownlint-cli
+  - npm install -g travis-lint
 
 before_script:
+  - travis-lint .travis.yml
   - dockerlint Dockerfile
+  - markdownlint README.md
 
 script:
   - docker build -t local/android .
