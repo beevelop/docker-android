@@ -9,7 +9,7 @@ branches:
   - master
 
 before_install:
-  - apt-get update -qq
+  - sudo apt-get update -qq
 
 install:
   - npm install -g npm
