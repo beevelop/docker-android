@@ -11,11 +11,6 @@
     + APIs: android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25,android-26,android-27
     + Build-Tools: 27.0.3
 
-<!-- ----
-## Tagging scheme
-- `v${TOOLS_VERSION}-${BUILD_TOOLS_VERSION}-${HIGHEST_ANDROID_SDK_VERSION}`
-- e.g. `v25.2.5-27.0.0-26`
----- -->
 
 ### Pull from Docker Hub
 ```
