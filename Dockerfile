@@ -1,6 +1,6 @@
 FROM beevelop/java
 
-MAINTAINER Maik Hummel <m@ikhummel.com>
+MAINTAINER Marco Lovato <maglovato@gmail.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
     ANDROID_BUILD_TOOLS_VERSION=27.0.3 \
