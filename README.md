@@ -10,8 +10,8 @@
 - Java :: Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
 - Gradle :: v2.10 (Groovy 2.4.5)
 - Android SDK Manager :: v26.1.1
-  - APIs: android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25,android-26,android-27
-  - Build-Tools: 27.0.3
+  - APIs: android-19,android-20,android-21,android-22,android-23,android-24,android-25,android-26,android-27,android-28
+  - Build-Tools: 28.0.3
 
 ## Pull from Docker Hub
 

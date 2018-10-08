@@ -17,7 +17,7 @@ before_script:
 - dockerlint Dockerfile
 - markdownlint README.md
 script:
-- docker build -t local/android .
+- docker build --network=host -t local/android .
 after_script:
 - docker run -d local/android
 - docker ps -a
