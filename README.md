@@ -1,46 +1,38 @@
-[![Travis](https://shields.beevelop.com/travis/beevelop/docker-android.svg?style=flat-square)](https://travis-ci.org/beevelop/docker-android)
-[![Docker Pulls](https://shields.beevelop.com/docker/pulls/beevelop/android.svg?style=flat-square)](https://links.beevelop.com/d-android)
-[![Layers](https://shields.beevelop.com/docker/image/layers/beevelop/android/latest.svg?style=flat-square)](https://links.beevelop.com/d-android)
-[![Size](https://shields.beevelop.com/docker/image/size/beevelop/android/latest.svg?style=flat-square)](https://links.beevelop.com/d-android)
-[![GitHub release](https://shields.beevelop.com/github/release/beevelop/docker-android.svg?style=flat-square)](https://github.com/beevelop/docker-android/releases)
-![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
-[![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
+# Android 8
 
-# Android 7 (SDK 25.X)
-### based on [beevelop/java](https://github.com/beevelop/docker-java)
-- Ant 1.9.6
-- Maven 3.3.9
-- Java 1.8.0_111
-- Gradle 2.10 (Groovy 2.4.5)
-- Android SDK 24.4.1
-    + APIs: android-10,android-15,android-16,android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24,android-25
-    + Build-Tools: 25.0.2
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/lovato/docker-android.svg?branch=master)](https://travis-ci.org/lovato/docker-android)
 
-----
-## Tagging scheme
-- `v${TOOLS_VERSION}-${BUILD_TOOLS_VERSION}-${HIGHEST_ANDROID_SDK_VERSION}`
-- e.g. `v25.2.5-27.0.0-26`
-----
-### Pull from Docker Hub
-```
-docker pull beevelop/android:latest
+## forked from [beevelop/android](https://github.com/beevelop/docker-android)
+
+- Ant :: Apache Ant(TM) version 1.9.6 compiled on July 8 2015
+- Maven :: Apache Maven 3.3.9
+- Java :: Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+- Gradle :: v2.10 (Groovy 2.4.5)
+- Android SDK Manager :: v26.1.1
+  - APIs: android-19,android-20,android-21,android-22,android-23,android-24,android-25,android-26,android-27,android-28
+  - Build-Tools: 28.0.3
+
+## Pull from Docker Hub
+
+```bash
+docker pull lovato/android:latest
 ```
 
-### Build from GitHub
-```
-docker build -t beevelop/android github.com/beevelop/docker-android
+## Build from GitHub
+
+```bash
+docker build -t lovato/android github.com/lovato/docker-android
 ```
 
-### Run image
-```
-docker run -it beevelop/android bash
+## Run image
+
+```bash
+docker run -it lovato/android /bin/bash
 ```
 
-### Use as base image
+## Use as base image
+
 ```Dockerfile
-FROM beevelop/android:latest
+FROM lovato/android:latest
 ```
-
-----
-
-![One does not simply use latest](https://i.imgflip.com/1fgwxr.jpg)
