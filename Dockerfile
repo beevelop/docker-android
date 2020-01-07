@@ -1,9 +1,7 @@
 FROM beevelop/java
 
-MAINTAINER Maik Hummel <m@ikhummel.com>
-
-ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
-    ANDROID_BUILD_TOOLS_VERSION=27.0.3 \
+ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
+    ANDROID_BUILD_TOOLS_VERSION=29.0.2 \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
     GRADLE_HOME="/usr/share/gradle" \
@@ -25,7 +23,8 @@ RUN mkdir android && cd android && \
 RUN mkdir /root/.android && touch /root/.android/repositories.cfg && \
     while true; do echo 'y'; sleep 2; done | sdkmanager "platform-tools" "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" && \
     while true; do echo 'y'; sleep 2; done | sdkmanager "platforms;android-10" "platforms;android-15" "platforms;android-16" "platforms;android-17" "platforms;android-18" "platforms;android-19" && \
-    while true; do echo 'y'; sleep 2; done | sdkmanager "platforms;android-20" "platforms;android-21" "platforms;android-22" "platforms;android-23" "platforms;android-24" "platforms;android-25" "platforms;android-26" "platforms;android-27"
+    while true; do echo 'y'; sleep 2; done | sdkmanager "platforms;android-20" "platforms;android-21" "platforms;android-22" "platforms;android-23" "platforms;android-24" "platforms;android-25" "platforms;android-26" "platforms;android-27" && \
+    while true; do echo 'y'; sleep 2; done | sdkmanager "platforms;android-28" "platforms;android-29"
 
 RUN while true; do echo 'y'; sleep 2; done | sdkmanager "extras;android;m2repository" "extras;google;google_play_services" "extras;google;instantapps" "extras;google;m2repository"
 RUN while true; do echo 'y'; sleep 2; done | sdkmanager "add-ons;addon-google_apis-google-15" "add-ons;addon-google_apis-google-16" "add-ons;addon-google_apis-google-17" "add-ons;addon-google_apis-google-18" "add-ons;addon-google_apis-google-19" "add-ons;addon-google_apis-google-21" "add-ons;addon-google_apis-google-22" "add-ons;addon-google_apis-google-23" "add-ons;addon-google_apis-google-24"
