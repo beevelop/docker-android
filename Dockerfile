@@ -22,7 +22,7 @@ RUN dpkg --add-architecture i386 && \
 
     # Installs Android SDK
     mkdir android && cd android && \
-    wget --non-verbose -O tools.zip ${ANDROID_SDK_URL} && \
+    wget --no-verbose -O tools.zip ${ANDROID_SDK_URL} && \
     unzip tools.zip && rm tools.zip && \
     (echo y; echo y; echo y; echo y; echo y; echo y) | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
     chmod a+x -R $ANDROID_HOME && \
