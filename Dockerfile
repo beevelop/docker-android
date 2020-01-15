@@ -4,7 +4,7 @@ MAINTAINER Lee Meador <docker@leemeador.com>
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANDROID_BUILD_TOOLS_VERSION=29.0.0 \
-    ANDROID_APIS="android-25,android-26,android-27" \
+    ANDROID_APIS="android-26,android-27,android-28" \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
     GRADLE_HOME="/usr/share/gradle" \
