@@ -1,5 +1,29 @@
 FROM beevelop/java
 
+ARG BUILD_DATE
+ARG BUILD_VERSION
+ARG VCS_REF
+
+LABEL maintainer="Maik Hummel <hi@beevelop.com>" \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.version=$BUILD_VERSION \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="1.0" \
+      org.label-schema.vcs-url="https://github.com/beevelop/docker-android.git" \
+      org.label-schema.name="beevelop/android" \
+      org.label-schema.vendor="Maik Hummel (beevelop)" \
+      org.label-schema.description="Simple Android Docker image" \
+      org.label-schema.url="https://beevelop.com/" \
+      org.label-schema.license="MIT" \
+      org.opencontainers.image.title="beevelop/android" \
+      org.opencontainers.image.description="Simple Android Docker image" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.authors="Maik Hummel (beevelop)" \
+      org.opencontainers.image.vendor="Maik Hummel (beevelop)" \
+      org.opencontainers.image.url="https://github.com/beevelop/docker-android" \
+      org.opencontainers.image.documentation="https://github.com/beevelop/docker-android/blob/master/README.md" \
+      org.opencontainers.image.source="https://github.com/beevelop/docker-android.git"
+
 # https://developer.android.com/studio/#downloads
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip" \
     ANDROID_BUILD_TOOLS_VERSION=29.0.2 \

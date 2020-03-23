@@ -4,7 +4,7 @@ services:
   - docker
 
 script:
-  - docker build -t beendroid .
-  - docker run -d beendroid
+  - docker build -t bee .
+  - docker run -d bee
   - docker ps -a
-  - docker run beendroid /bin/sh -c "mvn -v && gradle -v && java -version && ant -version"
+  - docker run bee /bin/sh -c "mvn -v && gradle -v && java -version && ant -version"
