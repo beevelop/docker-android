@@ -26,7 +26,7 @@ LABEL maintainer="Maik Hummel <hi@beevelop.com>" \
 
 # https://developer.android.com/studio/#downloads
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip" \
-    ANDROID_BUILD_TOOLS_VERSION=29.0.2 \
+    ANDROID_BUILD_TOOLS_VERSION=29.0.3 \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
     GRADLE_HOME="/usr/share/gradle" \
