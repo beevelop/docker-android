@@ -7,7 +7,7 @@
 
 # Android 11.0
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
-- Java 11
+- Java 8
 - Gradle 4.4.1 (Groovy: 2.4.16)
 - Apache Maven 3.6.3
 - Ant 1.10.7
