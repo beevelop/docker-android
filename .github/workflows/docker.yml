@@ -2,7 +2,7 @@ name: Docker Image
 
 on:
   schedule:
-    - cron: "0 12 * * *" # everyday at 12am
+    - cron: "0 13 * * *" # everyday at 1pm
   push:
     branches: ["**"]
     tags: ["v*.*.*"]
