@@ -1,9 +1,10 @@
-[![Docker Pulls](https://shields.beevelop.com/docker/pulls/beevelop/android.svg?style=flat-square)](https://links.beevelop.com/d-android)
-[![Layers](https://shields.beevelop.com/docker/image/layers/beevelop/android/latest.svg?style=flat-square)](https://links.beevelop.com/d-android)
-[![Size](https://shields.beevelop.com/docker/image/size/beevelop/android/latest.svg?style=flat-square)](https://links.beevelop.com/d-android)
-[![GitHub release](https://shields.beevelop.com/github/release/beevelop/docker-android.svg?style=flat-square)](https://github.com/beevelop/docker-android/releases)
-![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
-[![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
+![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/android.svg?style=for-the-badge)
+![Docker Stars](https://img.shields.io/docker/stars/beevelop/android?style=for-the-badge)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/android/latest?style=for-the-badge)
+[![GitHub release](https://img.shields.io/github/release/beevelop/docker-android.svg?style=for-the-badge)](https://github.com/beevelop/docker-android/releases)
+![GitHub](https://img.shields.io/github/license/beevelop/docker-android?style=for-the-badge)
+![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-android?style=for-the-badge)
+[![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
 # Android 11.0
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
