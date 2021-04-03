@@ -1,8 +1,9 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/beevelop/docker-android/Docker%20Image?style=for-the-badge)
 ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/android.svg?style=for-the-badge)
 ![Docker Stars](https://img.shields.io/docker/stars/beevelop/android?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/android/latest?style=for-the-badge)
+![License](https://img.shields.io/github/license/beevelop/docker-android?style=for-the-badge)
 [![GitHub release](https://img.shields.io/github/release/beevelop/docker-android.svg?style=for-the-badge)](https://github.com/beevelop/docker-android/releases)
-![GitHub](https://img.shields.io/github/license/beevelop/docker-android?style=for-the-badge)
 ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-android?style=for-the-badge)
 [![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
