@@ -10,31 +10,39 @@
 
 # Android 11.0
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
-- Java 8
+- Java 8 (OpenJDK 1.8.0_282)
 - Gradle 4.4.1 (Groovy: 2.4.16)
 - Apache Maven 3.6.3
 - Ant 1.10.7
 
-### Pull from Docker Hub
-```
-docker pull beevelop/android:latest
+### Pull, build or run this image
+```bash
+# pull the most recent tag / release
+docker pull beevelop/android:v2021.06.1
+
+# or run the image interactively
+docker run --rm --name beevelop -it beevelop/android:v2021.06.1 bash
+
+# or build the image from GitHub
+docker build -t beevelop/android github.com/beevelop/docker-base
 ```
 
-### Build from GitHub
-```
-docker build -t beevelop/android github.com/beevelop/docker-android
-```
-
-### Run image
-```
-docker run -it beevelop/android bash
-```
-
-### Use as base image
+### Or use as base image
 ```Dockerfile
-FROM beevelop/android:latest
+FROM beevelop/android:v2021.06.1
 ```
 
-----
+## Maintenance
+- [Command Line Tools Download](https://developer.android.com/studio#span-idcommand-toolsa-namecmdline-toolsacommand-line-tools-onlyspan)
+- List build-tools versions: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep build-tools`
+- List platforms: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep 'platforms:'`
+
+---
+
+![Beevelop's Docker Image Hierarchy](https://gist.githubusercontent.com/beevelop/b0cddab7209a683c77560d06ff00bc8e/raw/15429ee1d02e2c4dc019b760ca8c7ceff5911b82/hierarchy.png)
+
+---
+
+### Use tags where possible, because...
 
 ![One does not simply use latest](https://i.imgflip.com/1fgwxr.jpg)
