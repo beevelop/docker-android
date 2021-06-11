@@ -18,10 +18,10 @@
 ### Pull, build or run this image
 ```bash
 # pull the most recent tag / release
-docker pull beevelop/android:v2021.06.1
+docker pull beevelop/android:v2021.06.2
 
 # or run the image interactively
-docker run --rm --name beevelop -it beevelop/android:v2021.06.1 bash
+docker run --rm --name beevelop -it beevelop/android:v2021.06.2 bash
 
 # or build the image from GitHub
 docker build -t beevelop/android github.com/beevelop/docker-base
@@ -29,7 +29,7 @@ docker build -t beevelop/android github.com/beevelop/docker-base
 
 ### Or use as base image
 ```Dockerfile
-FROM beevelop/android:v2021.06.1
+FROM beevelop/android:v2021.06.2
 ```
 
 ## Maintenance
