@@ -8,7 +8,7 @@
 ![CalVer](https://img.shields.io/badge/CalVer-YYYY.MM.MICRO-22bfda.svg?style=for-the-badge)
 [![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
-# Android 11.0
+# Android 12 (API levels 31,32)
 ### based on [beevelop/java](https://github.com/beevelop/docker-java)
 - Java 8 (OpenJDK 1.8.0_282)
 - Gradle 4.4.1 (Groovy: 2.4.16)
