@@ -2,7 +2,7 @@ FROM beevelop/java
 
 # https://developer.android.com/studio/#downloads
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-9123335_latest.zip" \
-    ANDROID_BUILD_TOOLS_VERSION=33.0.1 \
+    ANDROID_BUILD_TOOLS_VERSION=33.0.2 \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
     GRADLE_HOME="/usr/share/gradle" \

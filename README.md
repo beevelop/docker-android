@@ -27,7 +27,7 @@ docker pull beevelop/android:v2023.01.2
 docker run --rm --name beevelop -it beevelop/android:v2023.01.2 bash
 
 # or build the image from GitHub
-docker build -t beevelop/android github.com/beevelop/docker-base
+docker build -t beevelop/android github.com/beevelop/docker-android
 ```
 
 ## Or use it as a base image
@@ -47,7 +47,7 @@ The usage of the Android SDK requires you to accept the licenses
 
 - [Command Line Tools Download](https://developer.android.com/studio#span-idcommand-toolsa-namecmdline-toolsacommand-line-tools-onlyspan)
 - List build-tools versions: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep build-tools`
-- List platforms: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep 'platforms:'`
+- List platforms: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep 'platforms;'`
 
 ---
 
