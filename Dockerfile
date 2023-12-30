@@ -1,7 +1,7 @@
 FROM beevelop/java
 
 # https://developer.android.com/studio/#downloads
-ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip" \
+ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip" \
     ANDROID_BUILD_TOOLS_VERSION=34.0.0 \
     ANT_HOME="/usr/share/ant" \
     MAVEN_HOME="/usr/share/maven" \
