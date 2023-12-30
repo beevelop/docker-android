@@ -47,6 +47,7 @@ The usage of the Android SDK requires you to accept the licenses
 
 - [Command Line Tools Download](https://developer.android.com/studio#span-idcommand-toolsa-namecmdline-toolsacommand-line-tools-onlyspan)
 - List build-tools versions: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep build-tools`
+  - [SDK Build Tools release notes](https://developer.android.com/tools/releases/build-tools)
 - List platforms: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep 'platforms:'`
 
 ---
