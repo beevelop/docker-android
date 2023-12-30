@@ -12,19 +12,19 @@
 
 ## based on [beevelop/java](https://github.com/beevelop/docker-java)
 
-- Java `11.0.17`
-- Gradle `4.4.1` (Groovy: `2.4.17`)
+- Java `17.0.9`
+- Gradle `4.4.1` (Groovy: `2.4.21`)
 - Apache Maven `3.6.3`
-- Ant `1.10.7`
+- Ant `1.10.12`
 
 ## Pull, build or run this image
 
 ```bash
 # pull the most recent tag / release
-docker pull beevelop/android:v2023.10.1
+docker pull beevelop/android:v2023.12.1
 
 # or run the image interactively
-docker run --rm --name beevelop -it beevelop/android:v2023.10.1 bash
+docker run --rm --name beevelop -it beevelop/android:v2023.12.1 bash
 
 # or build the image from GitHub
 docker build -t beevelop/android github.com/beevelop/docker-base
@@ -33,7 +33,7 @@ docker build -t beevelop/android github.com/beevelop/docker-base
 ## Or use it as a base image
 
 ```Dockerfile
-FROM beevelop/android:v2023.10.1
+FROM beevelop/android:v2023.12.1
 
 # accepts all the Licenses (please read first)
 RUN yes | sdkmanager --licenses --sdk_root=$ANDROID_SDK_ROOT
