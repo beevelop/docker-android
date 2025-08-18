@@ -8,11 +8,11 @@
 ![CalVer](https://img.shields.io/badge/CalVer-YYYY.MM.MICRO-22bfda.svg?style=for-the-badge)
 [![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
-# Android 13 (API levels 28 - 34)
+# Android 15 (API levels 31 - 35)
 
 ## based on [beevelop/java](https://github.com/beevelop/docker-java)
 
-- Java `17.0.9`
+- Java `17.0.12`
 - Gradle `4.4.1` (Groovy: `2.4.21`)
 - Apache Maven `3.6.3`
 - Ant `1.10.12`
@@ -41,7 +41,7 @@ RUN yes | sdkmanager --licenses --sdk_root=$ANDROID_SDK_ROOT
 
 ## Licenses
 
-The usage of the Android SDK requires you to accept the licenses 
+The usage of the Android SDK requires you to accept the licenses
 
 ## Maintenance
 
