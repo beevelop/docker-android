@@ -13,7 +13,7 @@
 ## based on [beevelop/java](https://github.com/beevelop/docker-java)
 
 - Java `17.0.12`
-- Gradle `4.4.1` (Groovy: `2.4.21`)
+- Gradle `8.12` (Groovy: `3.0.22`)
 - Apache Maven `3.6.3`
 - Ant `1.10.12`
 

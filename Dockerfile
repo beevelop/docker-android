@@ -14,7 +14,13 @@ ENV PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/plat
 WORKDIR /opt
 
 RUN apt-get -qq update && \
-    apt-get -qq install -y wget curl maven ant gradle
+    apt-get -qq install -y wget curl maven ant unzip
+
+# Installs gradle
+RUN wget https://services.gradle.org/distributions/gradle-8.12-bin.zip && \
+    unzip -d /usr/share/ gradle-8.12-bin.zip && \
+    mv /usr/share/gradle-8.12 /usr/share/gradle && \
+    ln -s /usr/share/gradle/bin/gradle /usr/bin/gradle
 
 # Installs Android SDK
 RUN mkdir android && cd android && \
