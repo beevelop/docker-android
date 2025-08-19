@@ -13,8 +13,11 @@ ENV PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/plat
 
 WORKDIR /opt
 
-RUN apt-get -qq update && \
-    apt-get -qq install -y wget curl maven ant unzip
+RUN apt -qq update && \
+    apt -qq install -y --no-install-recommends wget curl maven ant unzip && \
+    apt autoremove -y && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Installs gradle
 RUN wget https://services.gradle.org/distributions/gradle-8.12-bin.zip && \
@@ -27,8 +30,8 @@ RUN mkdir android && cd android && \
     wget -O tools.zip ${ANDROID_SDK_URL} && \
     unzip tools.zip && rm tools.zip && \
     cd cmdline-tools && \
-    mkdir latest && \
-    ls | grep -v latest | xargs mv -t latest
+    mkdir -p latest && \
+    find . -mindepth 1 -maxdepth 1 ! -name latest -exec mv -t latest {} +
 
 RUN mkdir /root/.android && touch /root/.android/repositories.cfg && \
     while true; do echo 'y'; sleep 2; done | sdkmanager "platform-tools" "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" && \
@@ -40,7 +43,5 @@ RUN mkdir /root/.android && touch /root/.android/repositories.cfg && \
 RUN chmod a+x -R $ANDROID_SDK_ROOT && \
     chown -R root:root $ANDROID_SDK_ROOT && \
     rm -rf /opt/android/licenses && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    apt-get autoremove -y && \
-    apt-get clean && \
+    rm -rf /tmp/* /var/tmp/* && \
     mvn -v && gradle -v && java -version && ant -version
