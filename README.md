@@ -22,10 +22,10 @@
 
 ```bash
 # pull the most recent tag / release
-docker pull beevelop/android:v2023.12.1
+docker pull beevelop/android:v2025.08.1
 
 # or run the image interactively
-docker run --rm --name beevelop -it beevelop/android:v2023.12.1 bash
+docker run --rm --name beevelop -it beevelop/android:v2025.08.1 bash
 
 # or build the image from GitHub
 docker build -t beevelop/android github.com/beevelop/docker-android
@@ -34,7 +34,7 @@ docker build -t beevelop/android github.com/beevelop/docker-android
 ## Or use it as a base image
 
 ```Dockerfile
-FROM beevelop/android:v2023.12.1
+FROM beevelop/android:v2025.08.1
 
 # accepts all the Licenses (please read first)
 RUN yes | sdkmanager --licenses --sdk_root=$ANDROID_SDK_ROOT
