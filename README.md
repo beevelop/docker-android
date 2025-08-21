@@ -8,7 +8,7 @@
 ![CalVer](https://img.shields.io/badge/CalVer-YYYY.MM.MICRO-22bfda.svg?style=for-the-badge)
 [![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
-# Android 16 (API levels 33 - 36)
+# Android 15 (API levels 33 - 35)
 
 ## based on [beevelop/java](https://github.com/beevelop/docker-java)
 
@@ -16,7 +16,7 @@
 - Gradle `8.12` (Groovy: `3.0.22`)
 - Apache Maven `3.6.3`
 - Ant `1.10.12`
-- Android Build Tools `36.0.1`
+- Android Build Tools `35.0.0`
 
 ## Pull, build or run this image
 
