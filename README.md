@@ -8,9 +8,13 @@
 ![CalVer](https://img.shields.io/badge/CalVer-YYYY.MM.MICRO-22bfda.svg?style=for-the-badge)
 [![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
-# Android 15 (API levels 33 - 35)
+# Docker Android SDK - Build Android Apps in Docker
 
-## based on [beevelop/java](https://github.com/beevelop/docker-java)
+> Production-ready Docker image with Android SDK 15 (API levels 33-35), Java 17, and essential build tools for Android development and CI/CD pipelines.
+
+## What's Included
+
+**Based on [beevelop/java](https://github.com/beevelop/docker-java)**
 
 - Java `17.0.12`
 - Gradle `8.12` (Groovy: `3.0.22`)
@@ -18,38 +22,47 @@
 - Ant `1.10.12`
 - Android Build Tools `35.0.0`
 
-## Pull, build or run this image
+## Usage
+
+### Pull and Run
 
 ```bash
-# pull the most recent tag / release
+# Pull the latest release
 docker pull beevelop/android:v2025.08.1
 
-# or run the image interactively
-docker run --rm --name beevelop -it beevelop/android:v2025.08.1 bash
+# Run interactively
+docker run --rm -it beevelop/android:v2025.08.1 bash
 
-# or build the image from GitHub
+# Build from source
 docker build -t beevelop/android github.com/beevelop/docker-android
 ```
 
-## Or use it as a base image
+### Use as Base Image
 
 ```Dockerfile
 FROM beevelop/android:v2025.08.1
 
-# accepts all the Licenses (please read first)
+# Accept Android SDK licenses (read them first!)
 RUN yes | sdkmanager --licenses --sdk_root=$ANDROID_SDK_ROOT
 ```
 
-## Licenses
+## Important Notes
 
-The usage of the Android SDK requires you to accept the licenses
+**Android SDK Licenses**: Using the Android SDK requires accepting Google's licenses. Review them before accepting programmatically.
 
-## Maintenance
+---
 
-- [Command Line Tools Download](https://developer.android.com/studio#span-idcommand-toolsa-namecmdline-toolsacommand-line-tools-onlyspan)
-- List build-tools versions: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep build-tools`
-  - [SDK Build Tools release notes](https://developer.android.com/tools/releases/build-tools)
-- List platforms: `sdkmanager --sdk_root=${ANDROID_SDK_ROOT}  --list | grep 'platforms:'`
+# All Docker Images
+
+| Badge | Pulls | Build Status | Release Date | Release |
+| --- | --- | --- | --- | --- |
+| [![base](https://img.shields.io/badge/beevelop%2Fbase-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-base) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/base.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-base/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-base?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-base.svg?style=flat-square) |
+| [![java](https://img.shields.io/badge/beevelop%2Fjava-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-java) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/java.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-java/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-java?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-java.svg?style=flat-square) |
+| [![android](https://img.shields.io/badge/beevelop%2Fandroid-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-android) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/android.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-android/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-android?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-android.svg?style=flat-square) |
+| [![android-nodejs](https://img.shields.io/badge/beevelop%2Fandroid_nodejs-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-android-nodejs) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/android-nodejs.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-android-nodejs/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-android-nodejs?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-android-nodejs.svg?style=flat-square) |
+| [![cordova](https://img.shields.io/badge/beevelop%2Fcordova-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-cordova) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/cordova.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-cordova/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-cordova?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-cordova.svg?style=flat-square) |
+| [![ionic](https://img.shields.io/badge/beevelop%2Fionic-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-ionic) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/ionic.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-ionic/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-ionic?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-ionic.svg?style=flat-square) |
+| [![nginx-basic-auth](https://img.shields.io/badge/beevelop%2Fnginx_basic_auth-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-nginx-basic-auth) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/nginx-basic-auth.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-nginx-basic-auth/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-nginx-basic-auth?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-nginx-basic-auth.svg?style=flat-square) |
 
 ---
 
