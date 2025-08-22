@@ -3,7 +3,7 @@ name: Docker Image
 on:
   schedule:
     - cron: "0 10 * * *" # everyday at 10am
-  pull_request_target:
+  pull_request:
     branches: ["latest"]
   push:
     branches: ["latest"]
@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref || github.ref }}
       - name: Set imageName based on the repository name
         id: step_one
         run: |
@@ -45,12 +47,13 @@ jobs:
         with:
           platforms: ${{ env.platforms }}
           push: ${{ github.event_name != 'pull_request' }}
+          pull: true
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
       
       - name: Docker Scout
         id: docker-scout-cves
-        if: ${{ github.event_name != 'pull_request_target' }}
+        if: ${{ github.event_name != 'pull_request' }}
         uses: docker/scout-action@v1
         with:
           command: cves
@@ -62,14 +65,14 @@ jobs:
 
       - name: Upload SARIF result
         id: upload-sarif
-        if: ${{ github.event_name != 'pull_request_target' }}
+        if: ${{ github.event_name != 'pull_request' }}
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: sarif.output.json
 
       - name: Compare to deployed image
         id: docker-scout-compare
-        if: ${{ github.event_name == 'pull_request_target' }}
+        if: ${{ github.event_name == 'pull_request' }}
         uses: docker/scout-action@v1
         with:
           command: compare
