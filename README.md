@@ -10,7 +10,7 @@
 
 # Docker Android SDK - Build Android Apps in Docker
 
-> Production-ready Docker image with Android SDK 15 (API levels 33-35), Java 17, and essential build tools for Android development and CI/CD pipelines.
+> Production-ready Docker image with Android SDK 16 (API levels 34-36), Java 17, and essential build tools for Android development and CI/CD pipelines.
 
 ## What's Included
 
@@ -20,7 +20,7 @@
 - Gradle `8.12` (Groovy: `3.0.22`)
 - Apache Maven `3.6.3`
 - Ant `1.10.12`
-- Android Build Tools `35.0.0`
+- Android Build Tools `36.0.0`
 
 ## Usage
 
@@ -28,10 +28,10 @@
 
 ```bash
 # Pull the latest release
-docker pull beevelop/android:v2025.08.1
+docker pull beevelop/android:v2026.03.1
 
 # Run interactively
-docker run --rm -it beevelop/android:v2025.08.1 bash
+docker run --rm -it beevelop/android:v2026.03.1 bash
 
 # Build from source
 docker build -t beevelop/android github.com/beevelop/docker-android
@@ -40,7 +40,7 @@ docker build -t beevelop/android github.com/beevelop/docker-android
 ### Use as Base Image
 
 ```Dockerfile
-FROM beevelop/android:v2025.08.1
+FROM beevelop/android:v2026.03.1
 
 # Accept Android SDK licenses (read them first!)
 RUN yes | sdkmanager --licenses --sdk_root=$ANDROID_SDK_ROOT
