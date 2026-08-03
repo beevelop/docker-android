@@ -5,6 +5,11 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 1
+    assignees:
+      - "beevelop"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
     groups:
       github-actions:
         patterns:
@@ -14,6 +19,11 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 1
+    assignees:
+      - "beevelop"
+    commit-message:
+      prefix: "build"
+      include: "scope"
     groups:
       docker:
         patterns:
